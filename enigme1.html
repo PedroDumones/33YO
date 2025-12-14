@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Énigme 1</title>
+</head>
+<body>
+
+<h1>Énigme 1</h1>
+
+<p>
+Je suis une colline, je vois toute la ville,
+mais je ne suis pas Fourvière.
+Qui suis-je ?
+</p>
+
+<input id="reponse" placeholder="Ta réponse">
+<button onclick="verifier()">Valider</button>
+
+<p id="message"></p>
+
+<script>
+function verifier() {
+  const reponse = document.getElementById("reponse").value.toLowerCase();
+  if (reponse.includes("croix-rousse")) {
+    document.getElementById("message").innerHTML =
+      "✅ Bravo ! <a href='enigme2.html'>Énigme suivante</a>";
+  } else {
+    document.getElementById("message").innerText =
+      "❌ Mauvaise réponse, essaie encore.";
+  }
+}
+</script>
+
+</body>
+</html>
